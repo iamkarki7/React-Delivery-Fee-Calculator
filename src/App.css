@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+  --primary-color: #a00c0c; /* Main accent color */
+  --secondary-color: #000000; /* Border and shadow color */
+  --text-color: #d5e432; /* Changed text color to primary color */
+  --background-color: #f9f9f9; /* Background color */
+  --input-border-color: #d0d0d0; /* Input default border color */
+  --button-color: #090a0a; /* Button color */
+  --button-text-color: #fff; /* Button text color */
+  --border-radius: 8px; /* Consistent border radius */
+  --box-shadow: 10px 10px 20px rgba(8, 8, 8, 0.5); /* Softer shadow */
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Open Sans, sans-serif;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+h1 {
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.box {
+  border: 5px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 15px 15px 30px rgba(8, 8, 8, 0.3);
+}
+
+input {
+  padding: 12px 15px;
+  border: 1.4px solid var(--input-border-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+input[type='number']:hover {
+  border-color: var(--text-color);
+}
+
+/* Button styles */
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #0a8e2d; /* Slightly darker shade */
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: 3px solid var(--primary-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 10px 15px;
+  }
+}
